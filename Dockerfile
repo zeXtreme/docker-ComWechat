@@ -14,7 +14,7 @@ ENV WINEPREFIX=/home/user/.wine \
 EXPOSE 5905
 
 
-RUN apt update && \
+RUN apt update  --allow-releaseinfo-change && \
     apt --no-install-recommends install wget winbind tigervnc-standalone-server tigervnc-common openbox \
     mesa-utils \
     procps \
