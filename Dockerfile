@@ -1,4 +1,4 @@
-FROM zixia/wine:6.0
+FROM tianon/wine:6
 
 USER root
 WORKDIR /
@@ -14,7 +14,7 @@ ENV WINEPREFIX=/home/user/.wine \
 EXPOSE 5905
 
 
-RUN apt update  --allow-releaseinfo-change && \
+RUN apt update && \
     apt --no-install-recommends install wget winbind tigervnc-standalone-server tigervnc-common openbox \
     mesa-utils \
     procps \
